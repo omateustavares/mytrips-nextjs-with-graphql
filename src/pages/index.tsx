@@ -14,6 +14,7 @@ export const getStaticProps = async () => {
   if (!places) return { notFound: true }
 
   return {
+    revalidate: 5,
     props: {
       places
     }
